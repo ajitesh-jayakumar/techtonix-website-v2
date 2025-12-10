@@ -13,7 +13,6 @@ export default function Footer() {
           <div className="flex space-x-6">
             <a href="/solution" className="text-muted-foreground hover:text-primary transition-colors">Solution</a>
             <a href="/technology" className="text-muted-foreground hover:text-primary transition-colors">Technology</a>
-            <a href="/impact" className="text-muted-foreground hover:text-primary transition-colors">Impact</a>
             <a href="/team" className="text-muted-foreground hover:text-primary transition-colors">Team</a>
             <a href="/gallery" className="text-muted-foreground hover:text-primary transition-colors">Gallery</a>
           </div>

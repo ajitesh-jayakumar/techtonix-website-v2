@@ -48,7 +48,7 @@ export default function Gallery() {
           
           <div className="space-y-12">
             {/* Video */}
-            <div className="aspect-video w-full max-w-5xl mx-auto bg-black rounded-2xl overflow-hidden shadow-2xl border border-border relative group">
+            {/* <div className="aspect-video w-full max-w-5xl mx-auto bg-black rounded-2xl overflow-hidden shadow-2xl border border-border relative group">
               <video 
                 controls 
                 preload="auto"
@@ -58,7 +58,7 @@ export default function Gallery() {
                 <source src="/assets/yuvafest.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-            </div>
+            </div> */}
 
             {/* Images Grid */}
             <div className="grid md:grid-cols-2 gap-8">

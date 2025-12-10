@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[700px] flex items-center justify-center text-white overflow-hidden border-b border-white/10">
+      <section className="relative h-[700px] flex items-center justify-center text-white overflow-hidden border-b border-white/10 pt-20 md:pt-0">
         <div className="absolute inset-0 z-0 bg-background">
           <video
             autoPlay
