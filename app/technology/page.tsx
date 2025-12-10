@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { Cpu, Battery, Wifi, AlertTriangle, Code, Layers, Zap, Eye, Radio, MapPin, Volume2, Droplets } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Technology | The Fenceless Patrol",
+  description: "Under the hood of The Fenceless Patrol. Solar power, thermal vision, and AI logic built for impact and scalability.",
+};
+
 import Image from "next/image";
 
 export default function Technology() {

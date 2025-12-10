@@ -1,5 +1,12 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "The Crisis | The Fenceless Patrol",
+  description: "Understanding the human-wildlife conflict. Why traditional fences fail and the need for a compassionate solution.",
+};
+
 import { AlertTriangle, Zap, Heart, TrendingDown, ShieldCheck, Sun, Activity } from "lucide-react";
 
 export default function Problem() {

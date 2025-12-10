@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { Quote, GraduationCap, Award, Video } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "The Team | The Fenceless Patrol",
+  description: "Meet the Grade 7 innovators from Yuvabharathi Public School behind The Fenceless Patrol.",
+};
+
 
 export default function Team() {
   return (

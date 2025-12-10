@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import ContactForm from '@/components/ContactForm';
+
+export const metadata: Metadata = {
+  title: "Contact Us | The Fenceless Patrol",
+  description: "Get in touch with Team Techtonix. We'd love to hear your feedback and questions.",
+};
+
 
 export default function Contact() {
   return (

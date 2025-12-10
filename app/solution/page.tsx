@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "The Solution | The Fenceless Patrol",
+  description: "An autonomous drone system acting as a guardian angel. Protecting the wild line without touching it.",
+};
+
 import { 
   AlertTriangle, 
   Shield, 
