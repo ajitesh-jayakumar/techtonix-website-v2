@@ -76,6 +76,12 @@ export default function ContactForm() {
         />
       </div>
 
+      <div className="text-[10px] text-muted-foreground text-center">
+        This site is protected by reCAPTCHA and the Google
+        <a href="https://policies.google.com/privacy" className="underline ml-1">Privacy Policy</a> and
+        <a href="https://policies.google.com/terms" className="underline ml-1">Terms of Service</a> apply.
+      </div>
+
       <button 
         type="submit" 
         disabled={isPending}

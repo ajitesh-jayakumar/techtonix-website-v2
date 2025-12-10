@@ -20,7 +20,12 @@ export async function submitContactForm(prevState: FormState, formData: FormData
   const recaptchaToken = formData.get('g-recaptcha-response') as string;
 
   if (!name || !email || !message || !recaptchaToken) {
-    return { success: false, error: 'Missing fields or captcha' };
+    const missing = [];
+    if (!name) missing.push('name');
+    if (!email) missing.push('email');
+    if (!message) missing.push('message');
+    if (!recaptchaToken) missing.push('captcha');
+    return { success: false, error: `Missing fields: ${missing.join(', ')}` };
   }
 
   try {
