@@ -1,6 +1,6 @@
 'use client';
 
-import { useActionState, useRef, useState } from 'react';
+import { useActionState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { submitContactForm, type FormState } from '@/app/actions/contact';
 
@@ -11,17 +11,13 @@ const initialState: FormState = {
 export default function ContactForm() {
   const [state, formAction, isPending] = useActionState(submitContactForm, initialState);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
-  const onCaptchaChange = (token: string | null) => {
-    setCaptchaToken(token);
-  };
-
-  const handleSubmit = (formData: FormData) => {
-    if (captchaToken) {
-      formData.append('g-recaptcha-response', captchaToken);
+  const handleSubmit = async (formData: FormData) => {
+    const token = await recaptchaRef.current?.executeAsync();
+    if (token) {
+      formData.append('g-recaptcha-response', token);
+      formAction(formData);
     }
-    formAction(formData);
   };
 
   return (
@@ -75,14 +71,14 @@ export default function ContactForm() {
         <ReCAPTCHA
           ref={recaptchaRef}
           sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'}
-          onChange={onCaptchaChange}
+          size="invisible"
           theme="dark"
         />
       </div>
 
       <button 
         type="submit" 
-        disabled={isPending || !captchaToken}
+        disabled={isPending}
         className="w-full bg-primary text-foreground py-2 px-4 rounded-md hover:opacity-90 transition-colors font-medium text-sm disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isPending ? 'Sending...' : 'Send Message'}

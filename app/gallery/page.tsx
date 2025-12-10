@@ -21,6 +21,7 @@ export default function Gallery() {
           <div className="aspect-video w-full max-w-5xl mx-auto bg-black rounded-2xl overflow-hidden shadow-2xl border border-border relative group">
             <video 
               controls 
+              preload="auto"
               className="w-full h-full object-contain"
               poster="/assets/yuvafest1.jpg"
             >
@@ -30,27 +31,45 @@ export default function Gallery() {
           </div>
         </div>
 
+        {/* Press Mention */}
+        <div className="mb-20">
+          <h2 className="text-[32px] leading-[38px] font-normal text-[#FAFAFA] mb-8 border-l-4 border-primary pl-4 font-sans">In The News</h2>
+          <div className="max-w-md mx-auto transform -skew-x-6 hover:skew-x-0 transition-all duration-500 hover:scale-110 hover:z-20">
+            <div className="relative h-[300px] rounded-xl overflow-hidden shadow-xl border border-border group">
+              <Image
+                src="/assets/TOI.jpeg"
+                alt="Featured in Times of India"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-card p-4">
+                <p className="text-foreground font-medium text-sm">Featured in Times of India, Dec 3rd 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Images Grid */}
         <div>
           <h2 className="text-[32px] leading-[38px] font-normal text-[#FAFAFA] mb-8 border-l-4 border-primary pl-4 font-sans">Event Photos</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl border border-border group">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="relative h-[300px] rounded-2xl overflow-hidden shadow-xl border border-border group transform -skew-x-6 hover:skew-x-0 transition-all duration-500 hover:scale-110 hover:z-20">
               <Image
                 src="/assets/yuvafest1.jpg"
                 alt="Team Techtonix at YUVAFEST 2025"
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-card p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <p className="text-foreground font-medium text-sm">YUVAFEST 2025 Presentation</p>
               </div>
             </div>
-            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl border border-border group">
+            <div className="relative h-[300px] rounded-2xl overflow-hidden shadow-xl border border-border group transform -skew-x-6 hover:skew-x-0 transition-all duration-500 hover:scale-110 hover:z-20">
               <Image
                 src="/assets/yuvafest2.jpg"
                 alt="Project Display"
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-card p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <p className="text-foreground font-medium text-sm">Project Prototype Display</p>
