@@ -21,22 +21,6 @@ export default function Gallery() {
       </div>
 
       <div className="site-container px-4 py-16">
-        {/* Video Section */}
-        <div className="mb-20">
-          <h2 className="text-[32px] leading-[38px] font-normal text-[#FAFAFA] mb-8 border-l-4 border-primary pl-4 font-sans">Project Demo & Presentation</h2>
-          <div className="aspect-video w-full max-w-5xl mx-auto bg-black rounded-2xl overflow-hidden shadow-2xl border border-border relative group">
-            <video 
-              controls 
-              preload="auto"
-              className="w-full h-full object-contain"
-              poster="/assets/yuvafest1.jpg"
-            >
-              <source src="/assets/yuvafest.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-
         {/* Press Mention */}
         <div className="mb-20">
           <h2 className="text-[32px] leading-[38px] font-normal text-[#FAFAFA] mb-8 border-l-4 border-primary pl-4 font-sans">In The News</h2>
@@ -58,36 +42,53 @@ export default function Gallery() {
           </div>
         </div>
 
-        {/* Images Grid */}
+        {/* Glimpse of Yuva Fest 2025 */}
         <div>
-          <h2 className="text-[32px] leading-[38px] font-normal text-[#FAFAFA] mb-8 border-l-4 border-primary pl-4 font-sans">Event Photos</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div 
-              className="relative h-[300px] rounded-2xl overflow-hidden shadow-xl border border-border group hover:scale-[1.02] transition-all duration-300 hover:shadow-2xl cursor-pointer"
-              onClick={() => setSelectedImage({src: '/assets/yuvafest1.jpg', alt: 'Team Techtonix at YUVAFEST 2025'})}
-            >
-              <Image
-                src="/assets/yuvafest1.jpg"
-                alt="Team Techtonix at YUVAFEST 2025"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-card p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <p className="text-foreground font-medium text-sm">YUVAFEST 2025 Presentation</p>
-              </div>
+          <h2 className="text-[32px] leading-[38px] font-normal text-[#FAFAFA] mb-8 border-l-4 border-primary pl-4 font-sans">Glimpse of Yuva Fest 2025</h2>
+          
+          <div className="space-y-12">
+            {/* Video */}
+            <div className="aspect-video w-full max-w-5xl mx-auto bg-black rounded-2xl overflow-hidden shadow-2xl border border-border relative group">
+              <video 
+                controls 
+                preload="auto"
+                className="w-full h-full object-contain"
+                poster="/assets/yuvafest1.jpg"
+              >
+                <source src="/assets/yuvafest.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
-            <div 
-              className="relative h-[300px] rounded-2xl overflow-hidden shadow-xl border border-border group hover:scale-[1.02] transition-all duration-300 hover:shadow-2xl cursor-pointer"
-              onClick={() => setSelectedImage({src: '/assets/yuvafest2.jpg', alt: 'Project Prototype Display'})}
-            >
-              <Image
-                src="/assets/yuvafest2.jpg"
-                alt="Project Display"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-card p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <p className="text-foreground font-medium text-sm">Project Prototype Display</p>
+
+            {/* Images Grid */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div 
+                className="relative h-[300px] rounded-2xl overflow-hidden shadow-xl border border-border group hover:scale-[1.02] transition-all duration-300 hover:shadow-2xl cursor-pointer"
+                onClick={() => setSelectedImage({src: '/assets/yuvafest1.jpg', alt: 'Team Techtonix at YUVAFEST 2025'})}
+              >
+                <Image
+                  src="/assets/yuvafest1.jpg"
+                  alt="Team Techtonix at YUVAFEST 2025"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-card p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-foreground font-medium text-sm">YUVAFEST 2025 Presentation</p>
+                </div>
+              </div>
+              <div 
+                className="relative h-[300px] rounded-2xl overflow-hidden shadow-xl border border-border group hover:scale-[1.02] transition-all duration-300 hover:shadow-2xl cursor-pointer"
+                onClick={() => setSelectedImage({src: '/assets/yuvafest2.jpg', alt: 'Project Prototype Display'})}
+              >
+                <Image
+                  src="/assets/yuvafest2.jpg"
+                  alt="Project Display"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-card p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-foreground font-medium text-sm">Project Prototype Display</p>
+                </div>
               </div>
             </div>
           </div>
